@@ -1,5 +1,6 @@
 import "app/assets/scss/base.scss"
 import "app/assets/scss/app.scss"
+import "react-i18n-editor/dist/styles/main.css"
 
 import { getPagesLinksDocuments } from "api/actions/pages"
 import ClientAPI from "api/client"
@@ -13,6 +14,7 @@ import { Modal } from "modules/modal/controller"
 import { StrictMode, Suspense, useEffect, useRef, useState } from "react"
 import { ClientContextProvider, useQuery } from "react-fetching-library"
 import ReactGA from "react-ga4"
+import { I18nEditorContainer, I18nextMiddleware } from "react-i18n-editor"
 import { I18nextProvider, useTranslation } from "react-i18next"
 import { Provider, useSelector } from "react-redux"
 import { Route, Routes } from "react-router"
@@ -52,20 +54,22 @@ function App() {
       <BrowserRouter>
         <Provider store={store}>
           <I18nextProvider defaultNS={localeCurrent} i18n={i18next}>
-            <ClientContextProvider client={ClientAPI}>
-              <Suspense fallback="Loading...">
-                <ErrorBoundary fallback="Error">
-                  <AppInit />
+            <I18nEditorContainer middleware={I18nextMiddleware}>
+              <ClientContextProvider client={ClientAPI}>
+                <Suspense fallback="Loading...">
+                  <ErrorBoundary fallback="Error">
+                    <AppInit />
 
-                  <Header />
-                  <Main />
-                  <Footer />
-                  <Cookies />
-                  <ModalContainer />
-                  <ToastContainer />
-                </ErrorBoundary>
-              </Suspense>
-            </ClientContextProvider>
+                    <Header />
+                    <Main />
+                    <Footer />
+                    <Cookies />
+                    <ModalContainer />
+                    <ToastContainer />
+                  </ErrorBoundary>
+                </Suspense>
+              </ClientContextProvider>
+            </I18nEditorContainer>
           </I18nextProvider>
         </Provider>
       </BrowserRouter>

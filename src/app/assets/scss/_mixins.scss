@@ -88,3 +88,38 @@ $tabletMaxWidth: 1000px;
 		border: 3px solid $trackColor;
 	}
 }
+
+/* Input */
+
+@mixin InputLabel {
+	font-size: 14px;
+	font-weight: 500;
+
+	span.weak {
+		color: $color-gray;
+	}
+}
+
+// Input, Select, Textarea appearance.
+@mixin InputAppearance($padding: 0.25em 0.5em) {
+	padding: $padding;
+	background: rgba(white, 0.25);
+	border: 2px solid transparent;
+	border-radius: 0.25em;
+
+	color: white;
+	transition: 200ms ease background-color, 200ms ease border-color;
+
+	&:focus,
+	&:focus-within,
+	&--focused {
+		background: rgba(white, 0.1);
+		border-color: rgba($color-primary-text, 0.75);
+	}
+
+	&:disabled,
+	&--disabled {
+		background: rgba(white, 0.1);
+		cursor: not-allowed;
+	}
+}
