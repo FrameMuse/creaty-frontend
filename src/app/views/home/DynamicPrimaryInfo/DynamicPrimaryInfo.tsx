@@ -67,7 +67,7 @@ function DynamicPrimaryInfo(props: DynamicPrimaryInfoProps) {
       }
       await runHeadingCycle()
     })().catch(error => {
-      if (process.env.NODE_ENV === "development") {
+      if (import.meta.env.NODE_ENV === "development") {
         console.warn(error)
       }
     })

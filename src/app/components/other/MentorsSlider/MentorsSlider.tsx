@@ -1,14 +1,15 @@
 import "./MentorsSlider.scss"
 
-import Button from "app/components/common/Button/Button"
-import ButtonIcon from "app/components/common/Button/ButtonIcon"
-import ButtonLink from "app/components/common/Button/ButtonLink"
-import PopupForm from "app/components/popups/PopupForm"
-import MentorCard from "app/components/UI/MentorCard/MentorCard"
-import { MentorType } from "interfaces/types"
-import { Modal } from "modules/modal/controller"
 import { useEffect, useRef } from "react"
 import { useTranslation } from "react-i18next"
+
+import Button from "@/app/components/common/Button/Button"
+import ButtonIcon from "@/app/components/common/Button/ButtonIcon"
+import ButtonLink from "@/app/components/common/Button/ButtonLink"
+import PopupForm from "@/app/components/popups/PopupForm"
+import MentorCard from "@/app/components/UI/MentorCard/MentorCard"
+import { MentorType } from "@/interfaces/types"
+import { Modal } from "@/modules/modal/controller"
 
 
 interface MentorsSliderProps {

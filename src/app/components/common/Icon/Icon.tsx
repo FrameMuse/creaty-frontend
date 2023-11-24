@@ -1,5 +1,6 @@
 import { SVGAttributes } from "react"
-import { classMerge, classWithModifiers } from "utils/common"
+
+import { classMerge, classWithModifiers } from "@/utils/common"
 
 
 export type IconName =

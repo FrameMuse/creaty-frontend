@@ -18,7 +18,8 @@ copies or substantial portions of the Software.
 
 import { Dispatch, SetStateAction } from "react"
 import { AnyIfEmpty } from "react-redux"
-import { toBase64 } from "utils/common"
+
+import { toBase64 } from "@/utils/common"
 
 import { ModalContainerState } from "./container"
 import { ModalComponent, ModalParams, ModalWindow } from "./types"

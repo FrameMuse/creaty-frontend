@@ -1,7 +1,8 @@
 import "./InfoSection.scss"
 
 import { ReactNode } from "react"
-import { classWithModifiers } from "utils/common"
+
+import { classWithModifiers } from "@/utils/common"
 
 
 interface InfoSectionProps {

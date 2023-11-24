@@ -1,12 +1,13 @@
 // import { ReactElement } from "react"
 // import ReactMarkdown from "react-markdown"
 
-import OuterLink from "app/components/services/OuterLink"
 import { TOptions } from "i18next"
 import type { marked } from "marked"
 import { Lexer } from "marked"
 import { createElement, Key, ReactNode } from "react"
 import { Link } from "react-router-dom"
+
+import OuterLink from "@/app/components/services/OuterLink"
 
 interface ReactPostProcessorModule {
   name: string
@@ -15,9 +16,9 @@ interface ReactPostProcessorModule {
 }
 
 /**
- * 
+ *
  * Tries to create `ReactElement`, if text is not `marked`, return as it is.
- * 
+ *
  * @param token - is `marked.Token` from which is created `ReactNode`.
  * @param key - is a `React Element Key` in the case the function is mapped.
  */

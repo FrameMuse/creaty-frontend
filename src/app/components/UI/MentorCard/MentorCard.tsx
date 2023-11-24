@@ -1,9 +1,10 @@
 import "./MentorCard.scss"
 
-import Icon from "app/components/common/Icon/Icon"
-import { MentorType } from "interfaces/types"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
+
+import Icon from "@/app/components/common/Icon/Icon"
+import { MentorType } from "@/interfaces/types"
 
 import TopicTag from "../Tag/TopicTag"
 

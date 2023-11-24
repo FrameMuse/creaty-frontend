@@ -1,7 +1,8 @@
 import "./DropDown.scss"
 
 import { Children, ComponentProps, ReactElement, useState } from "react"
-import { classWithModifiers } from "utils/common"
+
+import { classWithModifiers } from "@/utils/common"
 
 
 

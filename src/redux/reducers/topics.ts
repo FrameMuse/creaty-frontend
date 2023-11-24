@@ -1,9 +1,8 @@
-import { getTags, getTagsTopics } from "api/actions/tags"
-import ClientAPI from "api/client"
-import { ValuesOf } from "interfaces/common"
-import { MapActions } from "interfaces/reducer"
-import { TagType, TopicType } from "interfaces/types"
 import { Dispatch } from "redux"
+
+import { ValuesOf } from "@/interfaces/common"
+import { MapActions } from "@/interfaces/reducer"
+import { TagType, TopicType } from "@/interfaces/types"
 
 
 const initialState: {
@@ -37,17 +36,3 @@ export const topicsUpdate = (payload: Partial<typeof initialState>) => ({
   type: "TOPICS_UPDATE",
   payload
 })
-
-/* Thunk Actions */
-
-export async function topicsFetch(dispatch: Dispatch) {
-  const { error, payload } = await ClientAPI.query(getTagsTopics(1, 25), true)
-
-  // if (error) throw new Error("unexpected error")
-  // if (!payload) throw new Error("no payload")
-
-  if (error) return
-  if (!payload) return
-
-  dispatch(topicsUpdate({ list: payload.results, tags: payload.results.flatMap(topic => topic.tags) }))
-}

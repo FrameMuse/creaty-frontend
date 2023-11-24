@@ -1,6 +1,6 @@
 import "./ErrorView.scss"
 
-import ButtonLink from "app/components/common/Button/ButtonLink"
+import ButtonLink from "@/app/components/common/Button/ButtonLink"
 
 function ErrorView() {
   return (

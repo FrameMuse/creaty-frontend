@@ -1,6 +1,7 @@
-import { FormType } from "interfaces/types"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
+
+import { FormType } from "@/interfaces/types"
 
 import ContactForm from "../other/ContactForm/ContactForm"
 import PopupLayout from "./PopupLayout"

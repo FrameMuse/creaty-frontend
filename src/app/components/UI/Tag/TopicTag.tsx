@@ -1,9 +1,10 @@
 import "./TopicTag.scss"
 
-import { TagType } from "interfaces/types"
 import { MouseEventHandler } from "react"
 import { Link } from "react-router-dom"
-import { classWithModifiers } from "utils/common"
+
+import { TagType } from "@/interfaces/types"
+import { classWithModifiers } from "@/utils/common"
 
 
 interface TopicTagStringProps {

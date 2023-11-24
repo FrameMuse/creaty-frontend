@@ -1,8 +1,9 @@
 import "./FAQ.scss"
 
-import ButtonIcon from "app/components/common/Button/ButtonIcon"
 import { ReactNode, useState } from "react"
-import { classWithModifiers } from "utils/common"
+
+import ButtonIcon from "@/app/components/common/Button/ButtonIcon"
+import { classWithModifiers } from "@/utils/common"
 
 
 export function FAQ(props: { children: ReactNode }) {

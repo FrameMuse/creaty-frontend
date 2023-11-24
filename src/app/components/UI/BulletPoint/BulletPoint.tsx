@@ -1,8 +1,9 @@
 import "./BulletPoint.scss"
 
-import PopupForm from "app/components/popups/PopupForm"
-import { Modal } from "modules/modal/controller"
 import { useTranslation } from "react-i18next"
+
+import PopupForm from "@/app/components/popups/PopupForm"
+import { Modal } from "@/modules/modal/controller"
 
 
 interface BulletPointProps {

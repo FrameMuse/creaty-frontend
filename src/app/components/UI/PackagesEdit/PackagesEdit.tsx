@@ -1,9 +1,10 @@
 import "./PackagesEdit.scss"
 
-import Button from "app/components/common/Button/Button"
-import Input from "app/components/UI/Input/Input"
-import { MentorPackageType } from "interfaces/types"
 import { ChangeEvent, Dispatch, useEffect, useRef, useState } from "react"
+
+import Button from "@/app/components/common/Button/Button"
+import Input from "@/app/components/UI/Input/Input"
+import { MentorPackageType } from "@/interfaces/types"
 
 interface PackagesEditProps {
   name?: string

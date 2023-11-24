@@ -1,8 +1,9 @@
 import "./EditAvatar.scss"
 
-import Icon from "app/components/common/Icon/Icon"
 import { ChangeEvent, useState } from "react"
-import { classWithModifiers } from "utils/common"
+
+import Icon from "@/app/components/common/Icon/Icon"
+import { classWithModifiers } from "@/utils/common"
 
 interface EditAvatarProps {
   name?: string

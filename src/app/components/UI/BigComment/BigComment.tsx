@@ -1,7 +1,8 @@
 import "./BigComment.scss"
 
-import Icon from "app/components/common/Icon/Icon"
 import { ReactNode } from "react"
+
+import Icon from "@/app/components/common/Icon/Icon"
 
 
 interface BigCommentProps {

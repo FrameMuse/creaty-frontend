@@ -1,9 +1,10 @@
 import "./HelpfulCreaty.scss"
 
-import Button from "app/components/common/Button/Button"
-import PopupForm from "app/components/popups/PopupForm"
-import { Modal } from "modules/modal/controller"
 import { useTranslation } from "react-i18next"
+
+import Button from "@/app/components/common/Button/Button"
+import PopupForm from "@/app/components/popups/PopupForm"
+import { Modal } from "@/modules/modal/controller"
 
 
 function HelpfulCreaty() {

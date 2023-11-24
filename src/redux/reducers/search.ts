@@ -1,6 +1,6 @@
-import { ValuesOf } from "interfaces/common"
-import { MapActions } from "interfaces/reducer"
-import { TagType, TopicType } from "interfaces/types"
+import { ValuesOf } from "@/interfaces/common"
+import { MapActions } from "@/interfaces/reducer"
+import { TagType, TopicType } from "@/interfaces/types"
 
 
 export interface SearchState {

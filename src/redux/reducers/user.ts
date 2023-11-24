@@ -1,6 +1,6 @@
-import { ValuesOf } from "interfaces/common"
-import { MapActions } from "interfaces/reducer"
-import { User, UserType } from "interfaces/user"
+import { ValuesOf } from "@/interfaces/common"
+import { MapActions } from "@/interfaces/reducer"
+import { User, UserType } from "@/interfaces/user"
 
 
 const initialState: User = {

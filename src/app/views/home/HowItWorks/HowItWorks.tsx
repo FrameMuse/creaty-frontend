@@ -1,11 +1,12 @@
 import "./HowItWorks.scss"
 
-import Button from "app/components/common/Button/Button"
-import PopupForm from "app/components/popups/PopupForm"
-import BulletPoint from "app/components/UI/BulletPoint/BulletPoint"
-import InfoSection from "app/components/UI/InfoSection/InfoSection"
-import { Modal } from "modules/modal/controller"
 import { useTranslation } from "react-i18next"
+
+import Button from "@/app/components/common/Button/Button"
+import PopupForm from "@/app/components/popups/PopupForm"
+import BulletPoint from "@/app/components/UI/BulletPoint/BulletPoint"
+import InfoSection from "@/app/components/UI/InfoSection/InfoSection"
+import { Modal } from "@/modules/modal/controller"
 
 
 function HowItWorks() {

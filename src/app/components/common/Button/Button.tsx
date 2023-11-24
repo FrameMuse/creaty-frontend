@@ -1,9 +1,10 @@
 import "./Button.scss"
 
-import LoaderCover from "app/components/UI/Loader/LoaderCover"
 import { MouseEvent, MouseEventHandler, useState } from "react"
 import ReactGA from "react-ga4"
-import { classMerge, classWithModifiers } from "utils/common"
+
+import LoaderCover from "@/app/components/UI/Loader/LoaderCover"
+import { classMerge, classWithModifiers } from "@/utils/common"
 
 import { ButtonBaseProps } from "./Button.types"
 

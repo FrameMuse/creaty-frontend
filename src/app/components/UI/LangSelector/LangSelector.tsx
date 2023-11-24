@@ -1,11 +1,12 @@
 import "./LangSelector.scss"
 
-import useLocale from "i18n/hooks/useLocale"
-import localeResources from "i18n/locales"
 import _ from "lodash"
 import { useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { classWithModifiers } from "utils/common"
+
+import useLocale from "@/i18n/hooks/useLocale"
+import localeResources from "@/i18n/locales"
+import { classWithModifiers } from "@/utils/common"
 
 import Button from "../../common/Button/Button"
 import Icon from "../../common/Icon/Icon"

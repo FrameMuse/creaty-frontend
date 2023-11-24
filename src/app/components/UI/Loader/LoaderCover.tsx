@@ -1,6 +1,6 @@
 import "./Loader.scss"
 
-import { classWithModifiers } from "utils/common"
+import { classWithModifiers } from "@/utils/common"
 
 import Loader from "./Loader"
 

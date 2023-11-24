@@ -19,7 +19,8 @@ copies or substantial portions of the Software.
 import "./modal.scss"
 
 import { Component } from "react"
-import { classWithModifiers, stopPropagation } from "utils/common"
+
+import { classWithModifiers, stopPropagation } from "@/utils/common"
 
 import { modalContext } from "./context"
 import { modalPrivate } from "./controller"

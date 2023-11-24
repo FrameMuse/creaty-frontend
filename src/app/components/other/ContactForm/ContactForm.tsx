@@ -1,18 +1,16 @@
 import "./ContactForm.scss"
 
-import { postFormsIdApplications } from "api/actions/form"
-import { getPagesLinksDocuments } from "api/actions/pages"
-import ClientAPI from "api/client"
-import Button from "app/components/common/Button/Button"
-import Input, { InputStrainType as InputMaskType } from "app/components/UI/Input/Input"
-import LoaderCover from "app/components/UI/Loader/LoaderCover"
-import { FormElements } from "interfaces/common"
-import { FormFieldType, FormType, PageLinkType } from "interfaces/types"
 import { ChangeEvent, FormEvent, useState } from "react"
 import { useQuery } from "react-fetching-library"
 import { useTranslation } from "react-i18next"
 import ReactMarkdown from "react-markdown"
 import { useSelector } from "react-redux"
+
+import Button from "@/app/components/common/Button/Button"
+import Input, { InputStrainType as InputMaskType } from "@/app/components/UI/Input/Input"
+import LoaderCover from "@/app/components/UI/Loader/LoaderCover"
+import { FormElements } from "@/interfaces/common"
+import { FormFieldType, FormType, PageLinkType } from "@/interfaces/types"
 
 
 interface ContactFormProps {
@@ -27,9 +25,6 @@ function ContactForm(props: ContactFormProps) {
   const form = useSelector(state => state.forms[props.type])
   const [submitted, setSubmitted] = useState(false)
   const [socialMask, setSocialMask] = useState<InputMaskType<string>>()
-
-  const { error, payload } = useQuery(getPagesLinksDocuments)
-  const links = payload?.results.reduce<Record<PageLinkType["type"], PageLinkType>>((result, next) => ({ ...result, [next.type]: next }), {} as never)
 
   if (submitted) {
     return (
@@ -49,29 +44,6 @@ function ContactForm(props: ContactFormProps) {
     }
   }
 
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    if (form?.id == null) return
-
-    const target = event.currentTarget
-    const elements = target.elements as FormElements<FormFieldType["type"]>
-    const inputValues = [...elements].reduce<Record<string, string>>((result, next) => {
-      if (next instanceof HTMLInputElement || next instanceof HTMLTextAreaElement) {
-        return { ...result, [next.name]: next.value }
-      }
-      return result
-    }, {})
-
-    ClientAPI
-      .query(postFormsIdApplications(form.id, location.pathname, inputValues))
-      .then(({ error }) => {
-        if (error) return
-
-        setSubmitted(true)
-        props.onSubmit?.()
-      })
-  }
-
   const includesSocial = (field: FormFieldType) => ["telegram", "facebook", "whats_app", "viber"].includes(field.type)
   const name = form?.fields.find(field => field.type === "name")
   const email = form?.fields.find(field => field.type === "email")
@@ -88,7 +60,7 @@ function ContactForm(props: ContactFormProps) {
     })
   }
   return (
-    <form className="contact-form" onSubmit={onSubmit}>
+    <form className="contact-form">
       {form == null && (
         <LoaderCover />
       )}
@@ -114,7 +86,7 @@ function ContactForm(props: ContactFormProps) {
         )}
       </div>
       <Button className="contact-form__submit" size="big" type="submit" color="dark" eventLabel="Contact Form">{props.submitText || t("submit")}</Button>
-      <div className="contact-form__terms">{t("terms", { policyLink: links?.privacy_policy.url })}</div>
+      <div className="contact-form__terms">{t("terms")}</div>
     </form>
   )
 }

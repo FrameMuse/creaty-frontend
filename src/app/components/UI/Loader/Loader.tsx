@@ -1,6 +1,6 @@
 import "./Loader.scss"
 
-import { classMerge } from "utils/common"
+import { classMerge } from "@/utils/common"
 
 interface LoaderProps {
   className?: string

@@ -1,10 +1,11 @@
 import "./Input.scss"
 
-import Icon from "app/components/common/Icon/Icon"
-import useClickAway from "hooks/useClickAway"
 import _ from "lodash"
 import { ChangeEvent, DetailedHTMLProps, Dispatch, InputHTMLAttributes, useRef, useState } from "react"
-import { classMerge, classWithModifiers } from "utils/common"
+
+import Icon from "@/app/components/common/Icon/Icon"
+import useClickAway from "@/hooks/useClickAway"
+import { classMerge, classWithModifiers } from "@/utils/common"
 
 import DropDown from "../DropDown/DropDown"
 

@@ -1,8 +1,9 @@
 import "./CheckTree.scss"
 
-import Icon from "app/components/common/Icon/Icon"
 import { ReactNode, useState } from "react"
-import { classWithModifiers } from "utils/common"
+
+import Icon from "@/app/components/common/Icon/Icon"
+import { classWithModifiers } from "@/utils/common"
 
 import Checkbox from "../Checkbox/Checkbox"
 import TopicTag from "../Tag/TopicTag"

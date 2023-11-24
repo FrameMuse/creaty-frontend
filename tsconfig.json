@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
     "lib": [
       "dom",
       "dom.iterable",
       "ES2015.Iterable",
       "esnext"
     ],
-    "rootDir": "",
-    "baseUrl": "src",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -25,17 +24,19 @@
     "importHelpers": true,
     "allowJs": true,
     "skipLibCheck": true,
-    "typeRoots": [
-      "node_modules/@types",
-      "@types"
-    ],
-  },
-  "ts-node": {
-    "esm": true
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
     "src",
-    "scripts",
     "@types"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }

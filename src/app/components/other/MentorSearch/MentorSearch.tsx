@@ -1,16 +1,17 @@
 import "./MentorSearch.scss"
 
-import ButtonLink from "app/components/common/Button/ButtonLink"
-import Icon from "app/components/common/Icon/Icon"
-import LoaderCover from "app/components/UI/Loader/LoaderCover"
-import TopicTag from "app/components/UI/Tag/TopicTag"
-import useClickAway from "hooks/useClickAway"
 import { MouseEvent, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
-import { updateSearch } from "redux/reducers/search"
-import { classWithModifiers } from "utils/common"
+
+import ButtonLink from "@/app/components/common/Button/ButtonLink"
+import Icon from "@/app/components/common/Icon/Icon"
+import LoaderCover from "@/app/components/UI/Loader/LoaderCover"
+import TopicTag from "@/app/components/UI/Tag/TopicTag"
+import useClickAway from "@/hooks/useClickAway"
+import { updateSearch } from "@/redux/reducers/search"
+import { classWithModifiers } from "@/utils/common"
 
 
 function MentorSearch() {

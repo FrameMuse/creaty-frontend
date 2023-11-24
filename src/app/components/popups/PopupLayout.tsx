@@ -1,8 +1,9 @@
 import "./PopupLayout.scss"
 
-import { useModal } from "modules/modal/hook"
 import { ReactNode, useEffect } from "react"
 import ReactGA from "react-ga4"
+
+import { useModal } from "@/modules/modal/hook"
 
 import ButtonIcon from "../common/Button/ButtonIcon"
 

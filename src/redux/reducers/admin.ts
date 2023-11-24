@@ -1,5 +1,5 @@
-import { ValuesOf } from "interfaces/common"
-import { MapActions } from "interfaces/reducer"
+import { ValuesOf } from "@/interfaces/common"
+import { MapActions } from "@/interfaces/reducer"
 
 
 interface InitialStateType {

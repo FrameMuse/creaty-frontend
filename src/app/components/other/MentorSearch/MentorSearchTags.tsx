@@ -1,9 +1,10 @@
 import "./MentorSearch.scss"
 
-import TopicTag from "app/components/UI/Tag/TopicTag"
-import { TagType } from "interfaces/types"
 import { useEffect, useRef, useState } from "react"
-import { minFill } from "utils/common"
+
+import TopicTag from "@/app/components/UI/Tag/TopicTag"
+import { TagType } from "@/interfaces/types"
+import { minFill } from "@/utils/common"
 
 interface MentorSearchTagsProps {
   tags: TagType[]

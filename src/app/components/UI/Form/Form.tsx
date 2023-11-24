@@ -1,5 +1,6 @@
 import { DetailedHTMLProps, FormEvent, FormHTMLAttributes } from "react"
-import { FileToURLDataBase64 } from "utils/common"
+
+import { FileToURLDataBase64 } from "@/utils/common"
 
 type FormValue = string | string[] | number | number[] | boolean | null | undefined
 type FormValues = Record<string, FormValue>
