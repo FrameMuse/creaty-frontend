@@ -1,7 +1,6 @@
 import "./Button.scss"
 
 import { MouseEvent, MouseEventHandler, useState } from "react"
-import ReactGA from "react-ga4"
 
 import LoaderCover from "@/app/components/UI/Loader/LoaderCover"
 import { classMerge, classWithModifiers } from "@/utils/common"
@@ -26,14 +25,6 @@ function Button(props: ButtonProps) {
       setPending(false)
     } else {
       props.onClick?.(event)
-    }
-    /* --- Google Analytics --- */
-    if (props.eventLabel) {
-      ReactGA.event({
-        category: "User",
-        action: "Clicked Button",
-        label: props.eventLabel
-      })
     }
   }
 

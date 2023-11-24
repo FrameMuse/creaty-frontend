@@ -1,7 +1,6 @@
 import "./ContactForm.scss"
 
-import { ChangeEvent, FormEvent, useState } from "react"
-import { useQuery } from "react-fetching-library"
+import { ChangeEvent, useState } from "react"
 import { useTranslation } from "react-i18next"
 import ReactMarkdown from "react-markdown"
 import { useSelector } from "react-redux"
@@ -9,8 +8,7 @@ import { useSelector } from "react-redux"
 import Button from "@/app/components/common/Button/Button"
 import Input, { InputStrainType as InputMaskType } from "@/app/components/UI/Input/Input"
 import LoaderCover from "@/app/components/UI/Loader/LoaderCover"
-import { FormElements } from "@/interfaces/common"
-import { FormFieldType, FormType, PageLinkType } from "@/interfaces/types"
+import { FormFieldType, FormType } from "@/interfaces/types"
 
 
 interface ContactFormProps {
