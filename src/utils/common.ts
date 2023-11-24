@@ -1,9 +1,8 @@
 import "./extensions"
 
-import { Buffer } from "buffer"
-import { cloneElement, ReactNode, SyntheticEvent } from "react"
+import { cloneElement, SyntheticEvent } from "react"
 
-import { ExtractInterpolations, URLDataBase64 } from "@/interfaces/common"
+import { URLDataBase64 } from "@/interfaces/common"
 
 /**
  *
